@@ -25,4 +25,7 @@ public class ContaCorrente {
     @Column(precision = 10,scale=2, nullable = false)
     private BigDecimal saldo;
 
+//    @OneToOne(mappedBy = "contaCorrente")
+//    private Usuario usuario;
+
 }
