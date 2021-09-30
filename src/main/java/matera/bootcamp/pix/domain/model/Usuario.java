@@ -20,7 +20,6 @@ public class Usuario {
     @Column
     private String sobrenome;
 
-    @OneToOne(optional = false)
+    @OneToOne(optional = false, cascade = {CascadeType.ALL})
     private ContaCorrente contaCorrente;
-
 }
