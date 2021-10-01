@@ -1,5 +1,6 @@
 package matera.bootcamp.pix.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.hibernate.id.CompositeNestedGeneratedValueGenerator;
 
@@ -25,7 +26,8 @@ public class ContaCorrente {
     @Column(precision = 10,scale=2, nullable = false)
     private BigDecimal saldo;
 
-//    @OneToOne(mappedBy = "contaCorrente")
-//    private Usuario usuario;
+    @OneToOne(mappedBy = "contaCorrente")
+    @JsonIgnore
+    private Usuario usuario;
 
 }
